@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Event Propogator</title>
-  <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready (function () {
-      $('#submodule').on ('SMClick', 'button', function () {
-        console.log ('global');
-        return false;
-      });
-    });
-  </script>
+	<meta charset="UTF-8">
+	<title>Event Propogator</title>
 </head>
 <body>
-  <div id="container"></div>
+
+	<p>directly loaded html container</p>
+	<div id="ajax .load() target"></div><br>
+
+	<p>ajax "text" loaded html container</p>
+	<div id="ajax text target"></div><br>
+
+	<p>ajax JSON object loaded html container</p>
+	<div id="ajax json target"></div><br>
 
 
+<div id="footer"></div>
 
-
-  <script type="text/javascript">
-    $('#container').load('modules/TestSubModule.html');
-  </script>
+<!-- load scripts here -->
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/loader.js"></script>
 </body>
 </html>
